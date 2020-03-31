@@ -6,6 +6,7 @@ from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpRequest
 
+
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
@@ -43,3 +44,17 @@ def about(request):
             'year':datetime.now().year,
         }
     )
+
+def gallery(request):
+    """Renders the gallery page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/gallery.html',
+        {
+            'title':'gallery',
+            'message':'Your gallery.',
+            'year':datetime.now().year,
+        }
+    )
+

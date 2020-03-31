@@ -97,6 +97,7 @@
     <Content Include="app\static\app\images\6059576_orig.jpg" />
     <Content Include="app\static\app\images\7428999_orig.jpg" />
     <Content Include="app\static\app\images\9870324_orig.jpg" />
+    <Content Include="app\static\app\images\logo-transparent.png" />
     <Content Include="app\static\app\images\taylor-after.jpg" />
     <Content Include="app\static\harbor\about.html" />
     <Content Include="app\static\harbor\contact.html" />
@@ -253,6 +254,7 @@
     <Content Include="app\static\harbor\what-we-do.html" />
     <Content Include="app\static\harbor\work.html" />
     <Content Include="app\templates\app\Base.html" />
+    <Content Include="app\templates\app\gallery.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />

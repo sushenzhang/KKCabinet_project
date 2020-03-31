@@ -1,4 +1,5 @@
 ﻿{% extends "app/Base.html" %}
+{% load staticfiles %}
 
 
 <body>
@@ -23,34 +24,35 @@
             <div class="col-lg-4">
               <nav class="site-navigation text-right ml-auto " role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                  <li class="active"><a href="index.html" class="nav-link">Home</a></li>
-                  <li><a href="work.html" class="nav-link">Work</a></li>
-                  <li><a href="what-we-do.html" class="nav-link">What We Do</a></li>
+                  <li class="active"><a href="{% url 'home'%}" class="nav-link">Home</a></li>
+                  <li><a href="#" class="nav-link">Work</a></li>
+                  <li><a href="#" class="nav-link">What We Do</a></li>
                 </ul>
               </nav>
             </div>
             <div class="col-lg-4 text-center">
               <div class="site-logo">
-                <a href="index.html">Harbor</a>
+                <a href="#" class="img-link"><img src="{% static 'app/images/logo-transparent.png' %}" alt="Image" class="img-fluid"></a>
               </div>
-
-
               <div class="ml-auto toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-white"><span class="icon-menu h3 text-primary"></span></a></div>
             </div>
             <div class="col-lg-4">
               <nav class="site-navigation text-left mr-auto " role="navigation">
                 <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                  <li><a href="about.html" class="nav-link">About</a></li>
-                  <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                  <li><a href="contact.html" class="nav-link">Contact</a></li>
+                  <li><a href="{% url 'about'%}" class="nav-link">About</a></li>
+                  <li><a href="{% url 'gallery'%}" class="nav-link">Gallery</a></li>
+                  <li><a href="{% url 'contact'%}" class="nav-link">Contact</a></li>
+                  <li><a href="{% url 'admin:index' %}">Login</a></li>
+                                   
                 </ul>
               </nav>
-            </div>
-            
+           
+            </div> 
+             
 
           </div>
         </div>
-
+      
       </header>
 
     {% endblock %}
@@ -66,7 +68,9 @@
             <div class="row">
               <div class="col-md-7">
                 <h2 class="footer-heading mb-4">About Us</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+                <p>K&K is a full custom cabinet design studio and shop located in Kitchener Waterloo , Ontario. 
+                  Whether you are renovating, building or looking to add some new built in cabinetry or vanities to your
+                  space , K&K is your answer to making custom affordable. </p>
 
               </div>
               <div class="col-md-4 ml-auto">
@@ -118,6 +122,7 @@
         </div>
       </div>
     </footer>
+
     {% endblock %}
 
 
