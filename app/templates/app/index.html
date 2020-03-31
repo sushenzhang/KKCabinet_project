@@ -1,33 +1,83 @@
 {% extends "app/layout.html" %}
-
+{% load staticfiles %}
 {% block content %}
+ 
 
-<div class="jumbotron">
-    <h1>Django</h1>
-    <p class="lead">Django is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            Django gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://djangobook.com/django-tutorials/">Learn more &raquo;</a></p>
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    
+    <div class="site-wrap" id="home-section">
+
+        <div class="owl-carousel-wrapper">
+
+          <div class="box-92819 shadow-lg">
+              <div>
+                <h1 class=" mb-3 text-black">Interior Design</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quam, ratione earum.</p>
+                <p class="mb-0 mt-4"><a href="#" class="btn btn-primary">Get In Touch</a></p>
+              </div>
+          </div>
+
+          <div class="owl-carousel owl-1 ">
+            <div class="ftco-cover-1" style="background-image: url({% static 'app/images/6059576_orig.jpg' %});"></div>
+            <div class="ftco-cover-1" style="background-image: url({% static 'app/images/7428999_orig.jpg' %});"></div>
+            <div class="ftco-cover-1" style="background-image: url({% static 'app/images/9870324_orig.jpg' %});"></div>
+          </div>
+
+        </div>  
+
+        <div class="site-section">
+          <div class="container">
+            <div class="row mb-5 align-items-center">
+              <div class="col-md-7">
+                <h2 class="heading-39291 mb-0">Our Work</h2>
+              </div>
+              <div class="col-md-5 text-right">
+                <p class="mb-0"><a href="#" class="more-39291">View All Works</a></p>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="media-02819">
+                  <a href="#" class="img-link"><img src="{% static 'app/images/9870324_orig.jpg' %}" alt="Image" class="img-fluid"></a>
+                  <h3><a href="#">Demo</a></h3>
+                  <span>Demo</span>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="media-02819">
+                  <a href="#" class="img-link"><img src="{% static 'app/images/9870324_orig.jpg' %}" alt="Image" class="img-fluid"></a>
+                  <h3><a href="#">Demo</a></h3>
+                  <span>Demo</span>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                <div class="media-02819">
+                  <a href="#" class="img-link"><img src="{% static 'app/images/9870324_orig.jpg' %}" alt="Image" class="img-fluid"></a>
+                  <h3><a href="#">Demo</a></h3>
+                  <span>Demo</span>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="media-02819">
+                  <a href="#" class="img-link"><img src="{% static 'app/images/9870324_orig.jpg' %}" alt="Image" class="img-fluid"></a>
+                  <h3><a href="#">Demo</a></h3>
+                  <span>Demo</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>The Python Package Index is a repository of software for the Python programming language.</p>
-        <p><a class="btn btn-default" href="https://pypi.org/">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Microsoft Azure</h2>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
-    </div>
-</div>
+     
+
+  </body>
+
 
 {% endblock %}
