@@ -1242,7 +1242,7 @@ h1, h2, h3, h4, h5,
   position: static; }
 
 .owl-carousel-wrapper {
-  height: 100vh;
+  height: 50vh;
   min-height: 600px;
   position: relative; }
 
@@ -1250,9 +1250,10 @@ h1, h2, h3, h4, h5,
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  -webkit-filter:brightness(50%);
   position: relative; }
   .ftco-cover-1, .ftco-cover-1 .container > .row {
-    height: 100vh;
+    height: 50vh;
     min-height: 600px; }
   .ftco-cover-1 > .container {
     position: relative; }
