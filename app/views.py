@@ -5,6 +5,7 @@ Definition of views.
 from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpRequest
+from .models import Pic,Material,Color,Classify
 
 
 def home(request):
@@ -48,13 +49,20 @@ def about(request):
 def gallery(request):
     """Renders the gallery page."""
     assert isinstance(request, HttpRequest)
+    pictures = Pic.objects.all()
+    material = Material.objects.all()
+    color = Color.objects.all()
+    classify = Classify.objects.all()
     return render(
         request,
         'app/gallery.html',
         {
             'title':'gallery',
-            'message':'Your gallery.',
-            'year':datetime.now().year,
+            'pics': pictures,
+            'materials':material,
+            'colors':color,
+            'classifies':classify,
+       
         }
     )
 

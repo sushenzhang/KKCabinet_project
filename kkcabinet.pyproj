@@ -87,6 +87,9 @@
     <Content Include="app\static\app\css\bootstrap\bootstrap.css" />
     <Content Include="app\static\app\css\jquery-ui.css" />
     <Content Include="app\static\app\css\jquery.fancybox.min.css" />
+    <Content Include="app\static\app\css\gallery.css">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="app\static\app\css\magnific-popup.css" />
     <Content Include="app\static\app\css\mediaelementplayer.css" />
     <Content Include="app\static\app\css\owl.carousel.min.css" />
@@ -100,6 +103,9 @@
     <Content Include="app\static\app\images\9870324_orig.jpg" />
     <Content Include="app\static\app\images\logo-transparent.png" />
     <Content Include="app\static\app\images\taylor-after.jpg" />
+    <Content Include="app\static\app\js\gallery.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="app\static\harbor\about.html" />
     <Content Include="app\static\harbor\contact.html" />
     <Content Include="app\static\app\fonts\flaticon-1\backup.txt" />

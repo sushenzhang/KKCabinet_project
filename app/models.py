@@ -5,23 +5,26 @@ Definition of models.
 from django.db import models
 
 # Create your models here.
-class Pic(models.Model):
-    material = models.ForeignKey('Material',on_delete = models.CASCADE)
-    color = models.ForeignKey('Color',on_delete = models.CASCADE)
-    object = models.ForeignKey('Object',on_delete = models.CASCADE)
-    image = models.ImageField(default='.\static\app\images\1318967_1.jpg')
 
 class Material(models.Model):
-    wood = models.BooleanField(default=False)
-    stone = models.BooleanField(default=False)
+    material = models.CharField(max_length = 50,default = 'N/A')
+    def __str__(self):
+        return self.material
 
 class Color(models.Model):
-    white = models.BooleanField(default=False)
-    grey = models.BooleanField(default=False)
-    black = models.BooleanField(default=False)
-    brown = models.BooleanField(default=False)
+    color = models.CharField(max_length = 50,default = 'N/A')
+    def __str__(self):
+        return self.color
 
-class Object(models.Model):
-    kitchen = models.BooleanField(default=False)
-    countertop = models.BooleanField(default=False)
-    tv = models.BooleanField(default=False)
+class Classify(models.Model):
+    classify = models.CharField(max_length = 200,default = 'N/A')
+    def __str__(self):
+        return self.classify
+
+class Pic(models.Model):
+    material = models.ManyToManyField(Material)
+    color = models.ManyToManyField(Color)
+    classify = models.ManyToManyField(Classify)
+    image = models.ImageField(upload_to = "gallery",default=None)
+    def __str__(self):
+        return self.image.name

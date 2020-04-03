@@ -1,10 +1,66 @@
 ﻿{% extends "app/layout.html" %}
+{% load staticfiles %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'app/css/gallery.css' %}">
+{% endblock %}
 
 {% block content %}
 
-<h2>{{ title }}.</h2>
-<h3>{{ message }}</h3>
 
-<p>Gallery</p>
+        <div class="site-section">
+          <div class="container">
+            <div class="row mb-5 align-items-center">
+              <div class="col-md-7">
+                <h2 class="heading-39291 mb-0">Our Work</h2>
+              </div>
+              <div class="col-md-5 text-right">
+                <p class="mb-0"><a href="#" class="more-39291">View All Works</a></p>
+              </div>
 
+
+            </div>
+            
+            <div id="myBtnContainer">
+                <div class="row">
+                <button class="btn active gallery" onclick="filterSelection('all')"> Show all</button>
+                </div>
+                <div class="row">
+                {% for classify in classifies %}
+                  <button class="btn gallery" onclick="filterSelection('{{ classify.classify }}')"> {{ classify.classify }}</button>
+                {% endfor %}
+                </div>
+                <div class="row">
+                {% for material in materials %}
+                  <button class="btn gallery" onclick="filterSelection('{{ material.material }}')"> {{ material.material }}</button>
+                {% endfor %}
+                </div>
+
+            </div>
+
+            <div class="row">
+                {% for pic in pics %}
+              <div class="column {{ pic.classify.all|join:" " }} {{ pic.color.all|join:" " }} {{ pic.material.all|join:" " }} show">
+                <div class="media-02819">
+                  <a href="{{ pic.image.url }}" class="img-link"><img src="{{ pic.image.url }}" alt="Image" class="img-fluid"></a>     
+                  <span>{{ pic.classify.all|join:" " }}</span>
+                  <span>{{ pic.color.all|join:" " }}</span>
+                  <span>{{ pic.material.all|join:" " }}</span>
+                </div>
+              </div>
+                {% endfor %}
+
+
+
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'app/js/gallery.js' %}"></script>
 {% endblock %}
