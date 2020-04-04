@@ -26,5 +26,7 @@ class Pic(models.Model):
     color = models.ManyToManyField(Color)
     classify = models.ManyToManyField(Classify)
     image = models.ImageField(upload_to = "gallery",default=None)
+    is_on_home_page = models.BooleanField(default = False)
+    is_on_home_page_gallery = models.BooleanField(default = False)
     def __str__(self):
         return self.image.name

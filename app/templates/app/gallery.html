@@ -16,20 +16,26 @@
             </div>
             
             <div class="container" id="btnContainer">
-                <div class="row" id="btnShowAll">
-                <button class="btn btnShowAll active"> Show all</button>
+                <div class="btnRow" id="btnShowAll">
+                    <button class="btn btnShowAll active"> Show all</button>
                 </div>
-                <div class="row" id="btnClassify">
+
+                <div class="btnRow" id="btnClassify">
+                   Object:
                 {% for classify in classifies %}
                   <button class="btn {{ classify.classify }}"> {{ classify.classify }}</button>
                 {% endfor %}
                 </div>
-                <div class="row" id="btnMaterial">
+
+                <div class="btnRow" id="btnMaterial">
+                    Material:
                 {% for material in materials %}
                   <button class="btn {{ material.material }}"> {{ material.material }}</button>
                 {% endfor %}
                 </div>
-                <div class="row" id="btnColor">
+
+                <div class="btnRow" id="btnColor">
+                    Color:
                 {% for color in colors %}
                   <button class="btn {{ color.color }} btnColor"> {{ color.color }}</button>
                 {% endfor %}

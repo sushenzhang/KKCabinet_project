@@ -24,6 +24,10 @@ h1 {
     margin: 8px -16px;
 }
 
+.btnRow {
+    margin: 8px -16px;
+}
+
     /* Add padding BETWEEN each column (if you want) */
     .row,
     .row > .column {
@@ -59,7 +63,7 @@ h1 {
 .btn {
     border: none;
     outline: none;
-    padding: 12px 16px;
+    padding: 5px 16px;
     background-color: white;
     cursor: pointer;
 }

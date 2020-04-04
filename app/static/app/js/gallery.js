@@ -2,7 +2,6 @@ filterSelection("all") // Execute the function and show all columns
 function filterSelection(c) {
     var x, i;
     x = document.getElementsByClassName("column");
-
     // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
     for (i = 0; i < x.length; i++) {
         removeClass(x[i], "show");
@@ -10,6 +9,7 @@ function filterSelection(c) {
         if (isNeedToShow(x[i],c)) addClass(x[i], "show");
     }
 }
+
 function isNeedToShow(element, c) {
     if (c == "all") {
         return true;
@@ -36,8 +36,6 @@ function isNeedToShow(element, c) {
     }
     return true;
 }
-
-
 
 // Show filtered elements
 function addClass(element, name) {

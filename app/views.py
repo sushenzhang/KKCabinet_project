@@ -10,12 +10,16 @@ from .models import Pic,Material,Color,Classify
 
 def home(request):
     """Renders the home page."""
+    pictures_on_home = Pic.objects.filter(is_on_home_page=True)
+    pictures_on_home_gallery = Pic.objects.filter(is_on_home_page_gallery=True)
     assert isinstance(request, HttpRequest)
     return render(
         request,
         'app/index.html',
         {
             'title':'Home Page',
+            'pics_home':pictures_on_home,
+            'pics_gallery':pictures_on_home_gallery,
             'year':datetime.now().year,
         }
     )
