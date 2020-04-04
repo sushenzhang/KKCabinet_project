@@ -9,6 +9,13 @@ body {
     font-family: Arial;
 }
 
+.site-section {
+
+    padding-top: 1rem;
+    padding-right: 0px;
+    padding-bottom: 1rem;
+    padding-left: 0px;
+}
 /* Center website */
 .main {
     max-width: 1000px;

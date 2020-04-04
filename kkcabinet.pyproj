@@ -55,7 +55,6 @@
     <Folder Include="app\static\app\css\bootstrap\" />
     <Folder Include="app\static\app\fonts\" />
     <Folder Include="app\static\app\scripts\" />
-    <Folder Include="app\static\harbor\" />
     <Folder Include="app\static\app\fonts\flaticon-1\" />
     <Folder Include="app\static\app\fonts\flaticon-1\font\" />
     <Folder Include="app\static\app\fonts\flaticon-1\license\" />
@@ -106,8 +105,6 @@
     <Content Include="app\static\app\js\gallery.js">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="app\static\harbor\about.html" />
-    <Content Include="app\static\harbor\contact.html" />
     <Content Include="app\static\app\fonts\flaticon-1\backup.txt" />
     <Content Include="app\static\app\fonts\flaticon-1\font\flaticon.css" />
     <Content Include="app\static\app\fonts\flaticon-1\font\Flaticon.eot" />
@@ -138,8 +135,6 @@
     <Content Include="app\static\app\fonts\icomoon\Read Me.txt" />
     <Content Include="app\static\app\fonts\icomoon\selection.json" />
     <Content Include="app\static\app\fonts\icomoon\style.css" />
-    <Content Include="app\static\harbor\gallery.html" />
-    <Content Include="app\static\harbor\index.html" />
     <Content Include="app\static\app\js\aos.js" />
     <Content Include="app\static\app\js\bootstrap-datepicker.min.js" />
     <Content Include="app\static\app\js\bootstrap.min.js" />
@@ -160,9 +155,6 @@
     <Content Include="app\static\app\js\popper.min.js" />
     <Content Include="app\static\app\js\slick.min.js" />
     <Content Include="app\static\app\js\typed.js" />
-    <Content Include="app\static\harbor\main.html" />
-    <Content Include="app\static\harbor\prepros-6.config" />
-    <Content Include="app\static\harbor\readme.txt" />
     <Content Include="app\static\app\scss\.DS_Store" />
     <Content Include="app\static\app\scss\bootstrap\.DS_Store" />
     <Content Include="app\static\app\scss\bootstrap\bootstrap-grid.scss" />
@@ -258,8 +250,6 @@
     <Content Include="app\static\app\scss\_site-base.scss" />
     <Content Include="app\static\app\scss\_site-blocks.scss" />
     <Content Include="app\static\app\scss\_site-navbar.scss" />
-    <Content Include="app\static\harbor\what-we-do.html" />
-    <Content Include="app\static\harbor\work.html" />
     <Content Include="app\templates\app\Base.html" />
     <Content Include="app\templates\app\gallery.html" />
     <Content Include="requirements.txt" />

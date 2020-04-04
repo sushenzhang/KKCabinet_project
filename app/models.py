@@ -22,9 +22,9 @@ class Classify(models.Model):
         return self.classify
 
 class Pic(models.Model):
-    material = models.ManyToManyField(Material)
-    color = models.ManyToManyField(Color)
-    classify = models.ManyToManyField(Classify)
+    material = models.ManyToManyField(Material,blank=True)
+    color = models.ManyToManyField(Color,blank=True)
+    classify = models.ManyToManyField(Classify,blank=True)
     image = models.ImageField(upload_to = "gallery",default=None)
     is_on_home_page = models.BooleanField(default = False)
     is_on_home_page_gallery = models.BooleanField(default = False)
